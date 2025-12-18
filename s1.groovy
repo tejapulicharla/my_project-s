@@ -1,16 +1,17 @@
-//pipeline{
-  //  agent any
-// hi there 
-    //stages{
-      //      stage ('test'){
-        //        echo 'to test the env'
+pipeline {
+    agent any
 
-          //  }
-        //}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
 
-    //}
-echo " successfully learned how to configure these things in Github and jenkins "
-
-// 1234
-
-
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+    }
+}
